@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- navbar -->
+     <div id="links">
+<div><a href="./index.html">Home</a></div>
+<div><a href="">Applied jobs</a></div>
+<div><a href="">Bookmarks</a></div>
+     </div>
+
+     <!-- form filling -->
+     
+
+     <form id="form" >
+        <h2>Enter your Application Details</h2>
+        <input type="text" placeholder="Enter Name" id="name" autocomplete="name"/>
+        <input type="email" placeholder="Enter email" id="email" autocomplete="off"/>
+  
+        <select aria-label="role" id="role">
+          <option value="fsd">FSD</option>
+          <option value="backend">Backend</option>
+          <option value="frontend">FrontEnd</option>
+        </select>
+        <input
+          type="number"
+          id="salary"
+          placeholder="Enter your expected salary in lakhs per annum"
+       autocomplete="name" />
+  
+        <input type="submit" id="submit" value="submit" autocomplete="off" />
+      </form>
+</body>
+</html>
+
+<script>
+    document.querySelector("#form").addEventListener("submit",jobSubmit)
+
+    let jobArr=[];
+    function jobSubmit(event) {
+        event.preventDefault();
+            let v1 = document.querySelector("#name").value;
+            let v2 = document.querySelector("#email").value;
+            let v3 = document.querySelector("#role").value;
+            let v4 = document.querySelector("#salary").value;
+        let jobObj={
+            personName:v1,
+            personEmail:v2,
+            PersonRole:v3,
+            personSalary:v4,
+        };
+
+        console.log(jobObj);
+        
+    }
+</script>
